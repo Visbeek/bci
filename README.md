@@ -1,12 +1,6 @@
 # BCI - UserAPI
 _Desarrollado por Matias Visbeek (matiasvisbeek@gmail.com)_
 
-
-
-[TOCM]
-
-[TOC]
-
 ## Pre-requisitos
 
  * git
@@ -34,7 +28,13 @@ _En la raiz del directorio donde se realizó la descarga del proyecto, ejecutar 
 ```
 
 ### Ejecución
-Una vez iniciado el proyecto se pueden realizar ejecuciónes desde el swagger generado por código en la url http://localhost:8080/swagger-ui/
+Una vez iniciado el proyecto se pueden realizar ejecuciónes desde
+
+**Swagger**
+En la url http://localhost:8080/swagger-ui/
+
+**Postman Collection**
+Desde la colección de Postman provista en el directorio /Adicionales bajo el archivo *BCI - UserAPI.postman_collection*
 
 ## Métodos 
 
@@ -114,18 +114,8 @@ Permite realizar la autenticación del usuario con email y contraseña, retorna 
 }
 ```
 
-## Construido con 🛠️
-
-_Utilicé las siguientes herramientas durante el desarrollo_
-
-* [Eclipse 2020-09](https://www.eclipse.org/) - IDE
-* [Spring Boot](https://spring.io/projects/spring-boot#overview) 
-* [Gradle](https://gradle.org/) - Manejador de dependencias
-* [Dozer](http://dozer.sourceforge.net/documentation/about.html) - Mapeador de objetos
-* [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) - Metodología para organizar repositorio git
-
-## Documentación 📖
-_En el directorio /diagramas se encuentran los siguientes diagramas:_
- * Diagrama de secuencia "Registro"
- * Diagrama de componentes
+## Información adicional 
+_Dentro del directorio /Adicionales puede encontrarse lo siguiente:_
+ * Archivo .sql con el DDL de creación de tablas necesarias para el servicio (*user-api-ddl.sql*)
+ * Diagramas relacionados al servicio dentro del subdirectorio /Diagramas
 
