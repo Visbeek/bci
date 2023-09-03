@@ -1,0 +1,23 @@
+CREATE TABLE phone (
+	id BIGINT(10) NOT NULL, 
+	number BIGINT(20) NOT NULL,
+	city_code INT NOT NULL,
+	country_code INT NOT NULL,
+	CONSTRAINT phone_id_pk PRIMARY KEY (id)
+);
+
+CREATE TABLE user (
+	id VARCHAR(36) NOT NULL,
+	name VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	"password" VARCHAR(30) NOT NULL,
+	phone_id INT NOT NULL,
+	created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	modified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	last_login TIMESTAMP NOT NULL,
+	token VARCHAR(255) NOT NULL,
+	is_active BOOL NOT NULL DEFAULT true,
+	CONSTRAINT user_email_uk UNIQUE (email),
+	CONSTRAINT user_id_pk PRIMARY KEY (id)
+	CONSTRAINT user_phon_id_fk FOREIGN KEY (phone_id) REFERENCES phone(id)
+);
